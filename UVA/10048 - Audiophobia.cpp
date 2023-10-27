@@ -1,6 +1,7 @@
 //بسم الله الرحمن الرحيم
 #include <bits/stdc++.h>
 using namespace std;
+void Ma3rof();
 #define int long long
 const int mx = 1e16;
 void min_self(int &a, int b) {
@@ -14,7 +15,7 @@ signed main(){
         cin >> c >> s >> q;
         if (!c && !s && !q) break;
         if (t != 1) {
-            cout << "\n\n";
+            cout << '\n';
         }
         cout << "Case #" << t << '\n';
         vector<vector<int>> matrix(c, vector<int>(c, mx));
@@ -40,15 +41,18 @@ signed main(){
             cin >> c1 >> c2;
             c1--, c2--;
             if (matrix[c1][c2] >= mx) {
-                cout << "no path";
+                cout << "no path\n";
             } else {
-                cout << matrix[c1][c2];
-            }
-            if (q) {
-                cout << '\n';
+                cout << matrix[c1][c2] << '\n';
             }
         }
     }
+}
+void Ma3rof() {
+#ifndef ONLINE_JUDGE
+    freopen("input.txt", "r", stdin);
+    freopen("output.txt", "w", stdout);
+#endif
 }
 /*
      * Ahmed ma3rof
